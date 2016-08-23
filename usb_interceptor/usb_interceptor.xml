@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/neo/Desktop/usb_interceptor/usb_interceptor.sch</source>
+    <date>Tue 19 Jan 2016 09:52:38 PM CET</date>
+    <tool>Eeschema 4.0.1-2.fc23-product</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>usb_interceptor.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P1">
+      <value>USB_A</value>
+      <footprint>lib:usb_pcb_in</footprint>
+      <libsource lib="conn" part="USB_A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>569E9EC2</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>USB_A</value>
+      <footprint>lib:usb_smd_tht_combo</footprint>
+      <libsource lib="conn" part="USB_A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>569E9F45</tstamp>
+    </comp>
+    <comp ref="JP1">
+      <value>Jumper_NO_Small</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x02</footprint>
+      <libsource lib="device" part="Jumper_NO_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>569EA028</tstamp>
+    </comp>
+    <comp ref="JP2">
+      <value>Jumper_NO_Small</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x02</footprint>
+      <libsource lib="device" part="Jumper_NO_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>569EA0D6</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="device" part="Jumper_NO_Small">
+      <description>Jumper normally open</description>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_NO_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="USB_A">
+      <description>A connector</description>
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">USB_A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="shield" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(JP1-Pad1)">
+      <node ref="P2" pin="4"/>
+      <node ref="JP1" pin="1"/>
+    </net>
+    <net code="2" name="Net-(P1-Pad2)">
+      <node ref="P1" pin="2"/>
+      <node ref="P2" pin="2"/>
+    </net>
+    <net code="3" name="Net-(JP2-Pad2)">
+      <node ref="P1" pin="1"/>
+      <node ref="JP2" pin="2"/>
+    </net>
+    <net code="4" name="Net-(P1-Pad3)">
+      <node ref="P1" pin="3"/>
+      <node ref="P2" pin="3"/>
+    </net>
+    <net code="5" name="Net-(JP1-Pad2)">
+      <node ref="JP1" pin="2"/>
+      <node ref="P1" pin="4"/>
+    </net>
+    <net code="6" name="Net-(JP2-Pad1)">
+      <node ref="JP2" pin="1"/>
+      <node ref="P2" pin="1"/>
+    </net>
+    <net code="7" name="Net-(P2-Pad5)">
+      <node ref="P2" pin="5"/>
+    </net>
+    <net code="8" name="Net-(P1-Pad5)">
+      <node ref="P1" pin="5"/>
+    </net>
+  </nets>
+</export>
