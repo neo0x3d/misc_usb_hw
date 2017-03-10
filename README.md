@@ -1,4 +1,7 @@
 # misc_usb_hw
+
+# This project has been moved to Gitlab: <https://gitlab.com/users/neo0x3d/projects>
+
 Misc (passive) USB hardware
 
 ## usb_interceptor
